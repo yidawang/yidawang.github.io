@@ -1,102 +1,379 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<!-- Index Layout Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  
+<!-- HEAD Start -->
+
 <head>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="./media/css/background.css" />
-<title>Yida Wang</title>
+  
+
+
+  <!-- Force HTTPS Start -->
+  <script>
+  // Don't force http when serving the website locally
+  if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+  </script>
+
+  <!-- Force HTTPS End -->
+
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yida Wang@Intel">
+  <meta name="author" content="Yida Wang">
+  <meta name="keywords" content="wang, yida, intel, princeton, parallel computing, data analytics">
+  <link rel="canonical" href="/">
+  <title>Yida Wang's Home Page</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link href="/css/grayscale.css" rel="stylesheet">
+  
+  <link href="/css/timeline.css" rel="stylesheet">
+  
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/rrssb.css" />
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/img/intel.png">
+  
+
+  
+
+  
+
+
+  <!-- iOS Web App mode -->
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="36x36" href="/img/web-app/icon-36p.png">
+  <link rel="apple-touch-icon" sizes="48x48" href="/img/web-app/icon-48p.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/web-app/icon-72p.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/img/web-app/icon-96p.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/web-app/icon-144p.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/img/web-app/icon-192p.png">
+
+  <!-- Android Web App mode -->
+
+  <link rel="manifest" href="/manifest.json">
+
+
+
+
+  
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#000000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#000000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+  
+
+
+
 </head>
-<body onload="gettime()">
-<img src="./media/pic/yidawang.png" width="150" height="225" align="left" />
-<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yida Wang</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department of Computer Science <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Princeton University <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35 Olden Street <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Princeton, NJ 08540, USA <br/><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Tel:</i> (609) 258-1759 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Email</i>: yidawang at cs dot princeton dot edu<br/>
-<br><br><br>
-<hr>
-<h3>About me</h3>
-<p>
-I am a PhD candidate in <a href="..">Department of Computer Science</a>, <a href="http://www.princeton.edu">Princeton University</a>. 
-My advisor is <a href="../~li">Prof. Kai Li</a>.
-I am also working with <a href="https://webapps.pni.princeton.edu/ncc/JDC/JDC/Home_Page.html">Prof. Jonathan Cohen</a> and <a href="http://www.princeton.edu/ntblab/">Prof. Nicholas Turk-Browne</a> at <a href="http://pni.princeton.edu/">Princeton Neuroscience Institute</a>.
-Before coming to Princeton in 2009, I received my B.E. from <a href="http://www.neu.edu.cn">Northeastern University</a>, Shenyang China,
-and my M.E. from <a href="http://www.gucas.ac.cn">Chinese Academy of Sciences</a>, Beijing China.
-From 2007 to 2009, I was also a research intern student in <a href="http://research.microsoft.com/en-us/labs/asia/default.aspx">Microsoft Research Asia</a>.
-</p>
-<p>
-My research interest is in computer system, high performance computing and big data analysis. Currently I am working on fMRI dataset to study whole brain scale functional connectivity (full correlation) using my own designed/developed <a href="http://pni.princeton.edu/pni-software-tools/fcma-toolbox"> Full Correlation Matrix Analysis (FCMA) toolbox</a>. We have built a <a href="http://mmxserver.cs.princeton.edu/wiki/"> computer cluster</a> for specific use of FCMA toolbox.
-</p>
-<p>
-I used to be in web search and information retrieval field, mainly working on user generated data crawling and extraction.
-</p>
-<p>
-You can find my (out-of-dated) resume <a href="doc/resume_yida.pdf">here</a>.
-</p>
-<h3>Publication</h3>
-<ul>
-<li><b>Yida Wang</b>, Jonathan D. Cohen, Kai Li and Nicholas B. Turk-Browne. <i>Full correlation matrix analysis of fMRI data</i>. Princeton Neuroscience Institute Technical Report 2014. <a href="http://pni.princeton.edu/publications/full-correlation-matrix-analysis-fmri-data">abstract</a> <a href="./paper/Wang_TR.pdf">PDF</a>
-</li><br/>
-<li><b>Yida Wang</b>, Kai Li, Moses Charikar, Jonathan D. Cohen and Nicholas B. Turk-Browne. <i>What you find depends on how you look: Category selectivity in frontal cortex revealed by whole-brain correlation analysis</i>. Annual Conference of Vision Sciences Society (VSS) 2013. <a href="http://www.journalofvision.org/content/13/9/493.short">abstract</a> <a href="./paper/vss2013-wang-poster.pdf">poster</a>
-</li><br/>
-<li>Jiang-Ming Yang, Rui Cai, <b>Yida Wang</b>, Jun Zhu, Lei Zhang, and Wei-Ying Ma.
-<i>Incorporating Site-Level Knowledge to Extract Structured Data from Web Forums</i>. WWW 2009. 
-<a href="./paper/www_2009.pdf">PDF</a>
-</li><br/>
-<li><b>Yida Wang</b>, Jiang-Ming Yang, Wei Lai, Rui Cai, Lei Zhang and Wei-Ying Ma.
-<i>Exploring Traversal Strategy for Efficient Web Forum Crawling</i>. SIGIR 2008. 
-<a href="./paper/sigir_2008.pdf">PDF</a> <a href="./paper/sigir_2008_slides.pdf">slides</a>
-</li><br/>
-<li>Rui Cai, Jiang-Ming Yang, Wei Lai, <b>Yida Wang</b> and Lei Zhang.
-<i>iRobot: An Intelligent Crawler for Web Forums</i>. WWW 2008.
-<a href="./paper/www_2008.pdf">PDF</a> <a href="./paper/www_2008_slides.pdf">slides</a>
-</li><br/>
+
+<!-- HEAD End -->
+
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  data-offset="151">
+
+    
+<!-- Navigation Start -->
+
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      
+        <a class="navbar-brand page-scroll" href="#page-top">
+      
+          <div>
+            
+            Yida Wang's Home Page
+          </div>
+        </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        
+
+          <!-- Scroll to section for each page in index -->
+          
+            <li>
+              <a class="page-scroll" href="#about"> About </a>
+            </li>
+          
+            <li>
+              <a class="page-scroll" href="#contact"> Contact </a>
+            </li>
+          
+
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Navigation End -->
+
+
+    
+<!-- Intro Start -->
+
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-10 col-md-offset-1 intro-text">
+          <a href="#about" class="page-scroll">
+              <img class="img-me" src="/img/yida.jpg" alt="" align="left">
+            </a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2>Yida Wang, Ph.D. </h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Research Scientist <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parallel Computing Lab, Intel Labs <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3600 Juliette Lane, Santa Clara, CA, 95054, USA <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Email</i>: yida.wang at intel dot com <br/>
+            
+          </div>
+        </div>
+    </div>
+  </div>
+</header>
+
+<!-- Intro End -->
+
+
+    
+      
+        
+      
+        
+          
+<!-- About Start -->
+
+<section id="about" class="container content-section text-center">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2 id="about">About</h2>
+
+<p>Yida Wang is a research scientist in the Parallel Computing Lab at Intel Labs. He received his Ph.D. in computer science and neuroscience from Princeton University. His research interest is in parallel computing and big data analytics. Yida currently works on applying cutting-edge computing techniques to analyze large-scale data, specifically the brain imaging data generated via fMRI.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- About End -->
+
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+          
+<!-- Contact Start -->
+
+<section id="contact" class="container content-section text-center">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      <h2 id="contact">Contact</h2>
+
+
+      
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact End -->
+
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <!-- Footer Start -->
+
+<footer>
+
+    <!-- Social Buttons Start -->
+
+<ul class="list-inline social-buttons">
+    
+    <li><a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+    
+    <li><a href="https://github.com/yidawang" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
+    
+    <li><a href="/feed.xml" target="_blank"><i class="fa fa-rss fa-fw"></i></a></li>
+    
+    
 </ul>
-<h3>Courses</h3>
-Courses I have taken or audited for credit in Princeton:<br/><br>
-&nbsp;&nbsp;Fall 2009<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 318 <a href="../courses/archive/fall09/cos318/">Operating System</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 429 <a href="../courses/archive/fall09/cos429/">Computer Vision</a><br/><br/>
-&nbsp;&nbsp;Spring 2010<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 423 <a href="../courses/archive/spring10/cos423/">Theory of Algorithm</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 424 <a href="../courses/archive/spring10/cos424/">Interacting with Data</a><br/><br/>
-&nbsp;&nbsp;Fall 2010<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 432 <a href="../courses/archive/fall10/cos432/">Information Security</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 441 <a href="../courses/archive/fall10/cos441/">Programming Language</a><br/><br/>
-&nbsp;&nbsp;Spring 2012<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;NEU 502A <a href="http://registrar.princeton.edu/course-offerings/course_details.xml?courseid=011355&term=1134">From Molecules to Systems to Behavior (Theory)</a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;NEU 502B <a href="http://registrar.princeton.edu/course-offerings/course_details.xml?courseid=011356&term=1134">From Molecules to Systems to Behavior (Lab course)</a><br/><br/>
-Projects and courses I have mentored/TAed in Princeton:<br/><br>
-&nbsp;&nbsp;Summer 2010<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Project <a href="../academics/ugradpgm/spe/summer10/Better_Map/Hello,_Map.html">The "Better" Campus Map</a> 
-in <a href="../academics/ugradpgm/spe/home/">SPE 2010</a><br/><br/>
-&nbsp;&nbsp;Fall 2010<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 318 <a href="../courses/archive/fall10/cos318/">Operating System</a>, for project 3 Preemptive Scheduling<br/><br/>
-&nbsp;&nbsp;Spring 2012<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 333 <a href="../courses/archive/spring12/cos333/">Advanced Programming Techniques</a><br/><br/>
-&nbsp;&nbsp;Fall 2012<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;COS 318 <a href="../courses/archive/fall12/cos318/">Operating System</a><br/>
-<h3>Others</h3>
-<p>I love football (people call it soccer in US). I play football and watch football match regularly.
-I have been a fan of Argentina National Football Team since 1990, the summer of Italy.
-I am interested in many things regarding Argentina football, including all the matches of Argentina all-level men's football team
-(National, Olympics(U23), U20, U17) and the performance of main Argentine football players in their own clubs.</p>
-<p>Welcome to drop me email if we have common interest on this!</p>
-<hr>
-<p align="center"><i><font size="1">Last updated: <text id="update_time"></text></font></i></p>
-<!-- Start Bravenet.com Service Code -->
-<script language="JavaScript" type="text/javascript" src="http://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=2">
+
+<!-- Social Buttons End -->
+
+
+    <p><br><br></p>
+
+    <div class="container text-center">
+        <p>Copyright &copy; Yida Wang 2016</p>
+        
+		<p align="center"><i><font size="1">since: 02/06/2011</font></i></p>
+    </div>
+</footer>
+
+<p><br><br><br><br><br><br></p>
+
+<!-- Footer End -->
+
+
+    
+<!-- Javascript Start -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<!--* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.-->
+<script>
+function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
+$(document).ready(toggleNavCollapse);
+$(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});
 </script>
-<!-- END DO NOT MODIFY -->
-<p align="center"><i><font size="1">since: 02/06/2011</font></i></p>
-<!-- Start JS Code -->
-<script language="JavaScript" type="text/javascript">
-function gettime() {
-   var x = document.lastModified;
-   document.getElementById("update_time").innerHTML = x;
+
+
+
+  <!-- Collapse navbar when navbar-brand is clicked -->
+
+  <script>
+  $(function(){$(".navbar-brand").click(function(){$(".collapse.in")&&$(".collapse.in").animate({height:"1px"},500,function(){$(".collapse.in").removeClass("in")})})});
+  </script>
+
+
+
+
+
+
+  
+
+  <!-- Google Tracking Id Start -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- Google Tracking Id End -->
+
+  
+
+
+
+
+
+
+
+
+<script>
+function addTohistory() {
+  if (!window.location.host.startsWith("127.0.0.1")) {
+    history.pushState({}, '', 'http://www.yidawang.org/');
+  }
 }
 </script>
-<!-- END JS code -->
-</body>
+
+<!-- Gesture Navigation / Swipe Instruction Start -->
+
+
+<!-- Javascript End -->
+
+
+    
+  </body>
 </html>
+
+<!-- Index Layout End -->
