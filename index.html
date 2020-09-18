@@ -85,7 +85,7 @@
 <!-- HEAD End -->
 
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  data-offset="151">
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  data-offset="151" onload="getdate()">
 
     
 <!-- Navigation Start -->
@@ -144,7 +144,7 @@
               
             </a>
 <h2>Yida Wang, Ph.D. </h2>
-Applied Scientist <br/>
+Senior Scientist <br/>
 AWS AI, Amazon <br/>
 2100 University Ave., East Palo Alto, CA, 94303, USA <br/>
 <i>Email</i>: wangyida at amazon dot com <br/>
@@ -171,27 +171,33 @@ AWS AI, Amazon <br/>
     <div class="col-md-10 col-md-offset-1">
       <h2 id="about">About</h2>
 
-<p align="left">I am an applied scientist in the 
+<p align="left">I am a senior scientist in the 
 <a href="https://aws.amazon.com/machine-learning/"> AWS AI</a> team of Amazon. 
 Before joining Amazon, I worked at Parallel Computing Lab, 
-<a href="https://www.intel.com/content/www/us/en/research/overview.html"> Intel Labs</a> 
-as a research scientist.
+<a href="https://www.intel.com/content/www/us/en/research/overview.html"> Intel Labs</a>.
 I received my Ph.D. in <a href="http://www.cs.princeton.edu">computer science</a> and 
 <a href="http://pni.princeton.edu">neuroscience</a> from 
-<a href="http://www.princeton.edu">Princeton University</a>.
-My research interest is in high-performance computing and big data analytics.
-I currently work on optimizing the inference of deep learning models towards 
-different kinds of hardware architecture, e.g. CPUs, GPUs, TPUs. 
-I am a contributor of <a href="https://github.com/brainiak/brainiak">BrainIAK</a> and 
-<a href="https://github.com/dmlc/tvm">TVM</a>.</p>
+<a href="http://www.princeton.edu">Princeton University</a>.</p>
 
-<p align="left">Together with my colleagues at AWS, we are the main maintainers of 
-    <a href="https://mxnet.incubator.apache.org/">MXNet</a>, a flexible and efficient 
-    library for deep learning. For Chinese users, we also maintain a 
-    <a href="https://zh.mxnet.io/">Chinese MXNet website</a>, including
-    <a href="http://zh.gluon.ai/">video tutorials</a>, 
-    <a href="https://zh.mxnet.io/blog/">weekly updated blogs</a>, and an active 
-    <a href="https://discuss.gluon.ai/">forum</a>.</p>
+<p align="left">My research interest is in systems, high-performance computing, and big data analytics.
+I currently work on deep learning systems, with a focus on compiling and optimizing
+deep learning models for efficient training and inference.
+Our mission is to bridge the high-level models from various frameworks and low-level 
+hardware platforms including CPUs, GPUs, and 
+<a href="https://aws.amazon.com/machine-learning/inferentia/">AWS homegrown accelerators</a>, 
+so that different models can execute in high-performance on different devices.
+My team on one hand delivers solid solutions and systems to serve both external and internal
+usages, on the other hand explores the cutting-edge techniques to conduct research and 
+publish in top-tier systems conferences.</p>
+
+<p align="left">Out of work, I spend some time to write a systematic 
+<a href="http://tvm.d2l.ai/">deep learning compiler tutorial</a>
+based on <a href="https://tvm.apache.org/">Apache TVM</a>. 
+The progress is slow as we are short of hands and 
+short of time. We are keen in looking for contributors to this work.</p>
+
+<p align="left"><mark>We are actively hiring!</mark>
+Do drop me a line if you are interested in our work.</p>
 
     </div>
   </div>
@@ -199,6 +205,8 @@ I am a contributor of <a href="https://github.com/brainiak/brainiak">BrainIAK</a
 
 <!-- About End -->
 
+        
+      
         
       
         
@@ -278,6 +286,8 @@ I am a contributor of <a href="https://github.com/brainiak/brainiak">BrainIAK</a
       
         
       
+        
+      
     
 
     <!-- Footer Start -->
@@ -292,6 +302,8 @@ I am a contributor of <a href="https://github.com/brainiak/brainiak">BrainIAK</a
     
     <li><a href="https://github.com/yidawang" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
     
+    <li><a href="https://scholar.google.com/citations?user=NvBZp6MAAAAJ&hl=en" target="_blank"><i class="fa fa-book fa-fw"></i></a></li>
+    
     
 </ul>
 
@@ -300,14 +312,15 @@ I am a contributor of <a href="https://github.com/brainiak/brainiak">BrainIAK</a
 
     <div class="container text-center">
         <p><font size="2">Created with <a href="http://jekyllrb.com/">Jekyll</a><br />
-            Copyright &copy; Yida Wang 2018</font></p>
+            Copyright &copy; Yida Wang 2020</font></p>
         
         <!-- Start Bravenet.com Service Code -->
 		<script language="JavaScript" type="text/javascript" src="http://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=2">
 		</script>
 		<!-- END DO NOT MODIFY -->
 		
-		<p align="center"><i><font size="1">since: 02/06/2011</font></i></p>
+        <p align="center"><i><font size="1">since: 02/06/2011</font></i></p>
+        <p align="center" id="update"></p>
     </div>
 </footer>
 
@@ -383,6 +396,17 @@ function addTohistory() {
 
 <!-- Gesture Navigation / Swipe Instruction Start -->
 
+
+<!-- Get the document update time -->
+<script language="JavaScript" type="text/javascript">
+  function getdate() 
+  {
+    var x = "Last update: "+document.lastModified;
+    x = x.fontsize(1);
+    x = x.italics();
+    document.getElementById("update").innerHTML=x;
+  }
+</script>
 
 <!-- Javascript End -->
 

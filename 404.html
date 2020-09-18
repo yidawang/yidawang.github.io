@@ -161,6 +161,8 @@
     
     <li><a href="https://github.com/yidawang" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
     
+    <li><a href="https://scholar.google.com/citations?user=NvBZp6MAAAAJ&hl=en" target="_blank"><i class="fa fa-book fa-fw"></i></a></li>
+    
     
 </ul>
 
@@ -169,14 +171,15 @@
 
     <div class="container text-center">
         <p><font size="2">Created with <a href="http://jekyllrb.com/">Jekyll</a><br />
-            Copyright &copy; Yida Wang 2018</font></p>
+            Copyright &copy; Yida Wang 2020</font></p>
         
         <!-- Start Bravenet.com Service Code -->
 		<script language="JavaScript" type="text/javascript" src="http://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=2">
 		</script>
 		<!-- END DO NOT MODIFY -->
 		
-		<p align="center"><i><font size="1">since: 02/06/2011</font></i></p>
+        <p align="center"><i><font size="1">since: 02/06/2011</font></i></p>
+        <p align="center" id="update"></p>
     </div>
 </footer>
 
@@ -244,6 +247,17 @@ function addTohistory() {
 
 <!-- Gesture Navigation / Swipe Instruction Start -->
 
+
+<!-- Get the document update time -->
+<script language="JavaScript" type="text/javascript">
+  function getdate() 
+  {
+    var x = "Last update: "+document.lastModified;
+    x = x.fontsize(1);
+    x = x.italics();
+    document.getElementById("update").innerHTML=x;
+  }
+</script>
 
 <!-- Javascript End -->
 
