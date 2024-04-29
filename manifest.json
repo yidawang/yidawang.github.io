@@ -32,6 +32,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "http://www.yidawang.org",
+  "start_url": "https://www.yidawang.org",
   "display": "standalone"
 }
