@@ -1,0 +1,78 @@
+# Site settings
+title: "Yida Wang's Home Page"
+description: "Yida Wang@Amazon"
+url: "https://www.yidawang.org"
+baseurl: ""
+
+# Author
+author: "Yida Wang"
+keywords: "wang, yida, amazon, aws, ai, princeton, parallel computing, hpc"
+
+# Profile image
+me-img: "/img/yida.jpg"
+
+# Favicon
+favicon: "/img/aws.png"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# GitHub Pages compatible plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+
+# Collections (optional)
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Navigation
+navigation:
+  - title: About
+    url: /#about
+  - title: Contact
+    url: /#footer-contact
+
+# Social links
+social:
+  - title: "linkedin"
+    url: "https://www.linkedin.com/in/yida-wang-4a4816125"
+  - title: "github"
+    url: "https://github.com/yidawang"
+  - title: "book"
+    url: "https://scholar.google.com/citations?user=NvBZp6MAAAAJ&hl=en"
+
+# Google Analytics 4
+google-analytics: "G-1411GQW7M1"
+
+# Bravenet counter
+bravenet-count: true

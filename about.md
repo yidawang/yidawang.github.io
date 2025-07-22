@@ -1,0 +1,9 @@
+# About
+
+I am a Principal Scientist in the [AWS AI](https://aws.amazon.com/machine-learning/) at Amazon, where I lead a Machine Learning Systems (MLSys) science team dedicated to advancing research and engineering in the field of machine learning systems. Our primary focus is on optimizing systems and compilers for large foundation models to enhance their training and serving efficiency and reliability. We strive to host large foundation model workloads in the most cost-efficient manner, particularly by leveraging [AWS homegrown accelerators](https://aws.amazon.com/machine-learning/trainium/).
+
+Our team is committed to delivering robust solutions and systems that cater to both external and internal users while simultaneously exploring cutting-edge techniques to conduct research and publish in top-tier systems conferences. Here is a collection of my peer-reviewed published [papers](https://www.amazon.science/author/yida-wang) in AWS.
+
+Before joining Amazon, I worked at the Parallel Computing Lab at [Intel Labs](https://www.intel.com/content/www/us/en/research/overview.html). I received my Ph.D. in [Computer Science](http://www.cs.princeton.edu) and [Neuroscience](http://pni.princeton.edu) from [Princeton University](http://www.princeton.edu).
+
+**We are actively seeking talented scientists and engineers to join our team,** particularly those with expertise in machine learning systems, including distributed training and inference, deep learning compilers, and tensor program generation. If you are passionate about our work and believe you can contribute to our mission, please don't hesitate to reach out to me.
