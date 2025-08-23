@@ -6,7 +6,7 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.author }}">
     <meta name="keywords" content="{{ site.keywords }}">
-    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="referrer" content="unsafe-url">
     
     <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
     
@@ -72,8 +72,11 @@
             <!-- Start Bravenet.com Service Code -->
             <div style="text-align: center; display: flex; justify-content: center; width: 100%; margin: 10px 0;">
                 <script type="text/javascript">
-                // Ensure referrer is preserved for Bravenet
-                document.write('<script type="text/javascript" src="https://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=3&ref=' + encodeURIComponent(document.referrer) + '"><\/script>');
+                // Debug referrer information
+                console.log('Referrer:', document.referrer);
+                // Pass referrer to Bravenet if available
+                var referrer = document.referrer || '';
+                document.write('<script type="text/javascript" src="https://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=3' + (referrer ? '&ref=' + encodeURIComponent(referrer) : '') + '"><\/script>');
                 </script>
             </div>
             <!-- End Bravenet.com Service Code -->
