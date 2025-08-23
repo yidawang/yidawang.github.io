@@ -71,7 +71,10 @@
             {% if site.bravenet-count %}
             <!-- Start Bravenet.com Service Code -->
             <div style="text-align: center; display: flex; justify-content: center; width: 100%; margin: 10px 0;">
-                <script type="text/javascript" src="https://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=3"></script>
+                <script type="text/javascript">
+                // Ensure referrer is preserved for Bravenet
+                document.write('<script type="text/javascript" src="https://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=3&ref=' + encodeURIComponent(document.referrer) + '"><\/script>');
+                </script>
             </div>
             <!-- End Bravenet.com Service Code -->
             {% endif %}
