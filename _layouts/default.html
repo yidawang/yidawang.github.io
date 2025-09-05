@@ -33,7 +33,32 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '{{ site.google-analytics }}');
+      
+      // Enhanced referrer tracking
+      var enhancedReferrer = document.referrer;
+      var urlParams = new URLSearchParams(window.location.search);
+      var utmSource = urlParams.get('utm_source');
+      var utmMedium = urlParams.get('utm_medium');
+      var refParam = urlParams.get('ref');
+      
+      // Send custom event with full referrer info if available
+      if (enhancedReferrer || utmSource || refParam) {
+        gtag('event', 'enhanced_referrer', {
+          'custom_parameter_1': enhancedReferrer,
+          'custom_parameter_2': utmSource || 'organic',
+          'custom_parameter_3': utmMedium || 'referral',
+          'custom_parameter_4': refParam || ''
+        });
+      }
+      
+      gtag('config', '{{ site.google-analytics }}', {
+        'custom_map': {
+          'custom_parameter_1': 'full_referrer',
+          'custom_parameter_2': 'traffic_source', 
+          'custom_parameter_3': 'traffic_medium',
+          'custom_parameter_4': 'ref_parameter'
+        }
+      });
     </script>
     {% endif %}
 </head>
@@ -72,11 +97,18 @@
             <!-- Start Bravenet.com Service Code -->
             <div style="text-align: center; display: flex; justify-content: center; width: 100%; margin: 10px 0;">
                 <script type="text/javascript">
-                // Debug referrer information
-                console.log('Referrer:', document.referrer);
-                // Pass referrer to Bravenet if available
+                // Enhanced referrer tracking for Bravenet
                 var referrer = document.referrer || '';
-                document.write('<script type="text/javascript" src="https://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=3' + (referrer ? '&ref=' + encodeURIComponent(referrer) : '') + '"><\/script>');
+                var urlParams = new URLSearchParams(window.location.search);
+                var utmSource = urlParams.get('utm_source');
+                var refParam = urlParams.get('ref');
+                
+                // Use URL parameter if no referrer, or if UTM source is available
+                var effectiveReferrer = refParam || (utmSource ? 'utm:' + utmSource : referrer);
+                
+                console.log('Enhanced Referrer:', effectiveReferrer);
+                
+                document.write('<script type="text/javascript" src="https://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=3' + (effectiveReferrer ? '&ref=' + encodeURIComponent(effectiveReferrer) : '') + '"><\/script>');
                 </script>
             </div>
             <!-- End Bravenet.com Service Code -->
