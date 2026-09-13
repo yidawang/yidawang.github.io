@@ -1,18 +1,18 @@
 # Site settings
 title: "Yida Wang's Home Page"
-description: "Yida Wang@Amazon"
+description: "Yida Wang@NVIDIA"
 url: "https://www.yidawang.org"
 baseurl: ""
 
 # Author
 author: "Yida Wang"
-keywords: "wang, yida, amazon, aws, ai, princeton, parallel computing, hpc"
+keywords: "wang, yida, nvidia, compiler, agent, mlsys, ai, princeton, parallel computing, hpc"
 
 # Profile image
 me-img: "/img/yida.jpg"
 
 # Favicon
-favicon: "/img/aws.png"
+favicon: "/img/nvidia.ico"
 
 # Build settings
 markdown: kramdown
