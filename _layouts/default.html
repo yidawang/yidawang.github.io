@@ -92,18 +92,25 @@
             <p>&copy; {{ 'now' | date: '%Y' }} {{ site.author }}. Built with Jekyll.</p>
             {% if site.bravenet-count %}
             <!-- Start Bravenet.com Service Code -->
-            <div style="text-align: center; display: flex; justify-content: center; width: 100%; margin: 10px 0;">
+            <div id="bravenet-counter" style="text-align: center; display: flex; justify-content: center; width: 100%; margin: 10px 0;">
                 <script type="text/javascript">
                 // Enhanced referrer tracking for Bravenet
                 var referrer = document.referrer || '';
                 var urlParams = new URLSearchParams(window.location.search);
                 var utmSource = urlParams.get('utm_source');
                 var refParam = urlParams.get('ref');
-                
+
                 // Use URL parameter if no referrer, or if UTM source is available
                 var effectiveReferrer = refParam || (utmSource ? 'utm:' + utmSource : referrer);
 
-                document.write('<script type="text/javascript" src="https://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=3' + (effectiveReferrer ? '&ref=' + encodeURIComponent(effectiveReferrer) : '') + '"><\/script>');
+                // Load asynchronously instead of document.write (deprecated, and
+                // blocked/warned-about by modern browsers on slow connections).
+                // Same URL and query params, so counts/IP/referrer tracking on
+                // Bravenet's end are unaffected.
+                var bravenetScript = document.createElement('script');
+                bravenetScript.type = 'text/javascript';
+                bravenetScript.src = 'https://pub49.bravenet.com/counter/code.php?id=408577&usernum=4125476740&cpv=3' + (effectiveReferrer ? '&ref=' + encodeURIComponent(effectiveReferrer) : '');
+                document.getElementById('bravenet-counter').appendChild(bravenetScript);
                 </script>
             </div>
             <!-- End Bravenet.com Service Code -->
