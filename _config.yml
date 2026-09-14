@@ -17,11 +17,9 @@ favicon: "/img/nvidia.ico"
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:year/:month/:day/:title/
 
 # GitHub Pages compatible plugins
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
@@ -39,28 +37,17 @@ exclude:
   # site as a raw, unstyled /about.md file. It's only meant to be pulled
   # in via {% include_relative about.md %} from index.md.
   - about.md
-  # contact.md has no front matter and no page links to it; excluding it
-  # stops it from being published as a bare, unstyled /contact.md file.
-  - contact.md
-
-# Collections (optional)
-collections:
-  posts:
-    output: true
-    permalink: /:collection/:year/:month/:day/:title/
 
 # Defaults
 defaults:
   - scope:
       path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "Your Name"
-  - scope:
-      path: ""
     values:
       layout: "default"
+      # jekyll-seo-tag only reads `image` from page data, not from top-level
+      # site config, so set it here to get a default og:image/twitter:image
+      # on every page.
+      image: "/img/yida.jpg"
 
 # Navigation
 navigation:

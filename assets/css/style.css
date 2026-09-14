@@ -326,7 +326,21 @@ footer p {
         padding: 150px 0 60px;
         text-align: center;
     }
-    
+
+    .header-row {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .header-text {
+        padding-right: 0;
+    }
+
+    .intro-text {
+        text-align: center;
+        padding-right: 0;
+    }
+
     .img-me {
         width: 150px;
         height: 150px;
@@ -366,13 +380,9 @@ footer p {
     .nav-links {
         gap: 0.5rem;
     }
-    
+
     .nav-links a {
         font-size: 11px;
-    }
-    
-    main {
-        padding: 180px 1rem 1rem;
     }
 }
 
