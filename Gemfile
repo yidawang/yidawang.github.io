@@ -9,3 +9,6 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
 end
+
+# Lints the built site in CI (broken internal links, duplicate ids, etc.)
+gem "html-proofer", group: :test

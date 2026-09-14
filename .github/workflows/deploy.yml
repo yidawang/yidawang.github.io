@@ -3,13 +3,15 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: ["master"]
+  pull_request:
+    branches: ["master"]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Default to read-only; the deploy job below grants itself the extra
+# write permissions it needs. The build job never needs them, so it
+# never gets them even if a compromised gem tried to abuse them.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment
 concurrency:
@@ -19,12 +21,13 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1 (moving branch, re-pin periodically to pick up new Ruby releases)
         with:
           # Reads the version from .ruby-version so local dev and CI always
           # build with the same Ruby — bump that one file to upgrade both.
@@ -33,23 +36,34 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        # Only needed to compute the base_path for the Jekyll build below;
+        # doesn't require the pages/id-token write permissions.
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
+      - name: Check HTML (internal links, ids, images, scripts)
+        run: bundle exec htmlproofer ./_site --disable-external
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
