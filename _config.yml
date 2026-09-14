@@ -35,6 +35,13 @@ exclude:
   - .sass-cache
   - .jekyll-cache
   - .jekyll-metadata
+  # about.md has no front matter, so without this it gets copied to the
+  # site as a raw, unstyled /about.md file. It's only meant to be pulled
+  # in via {% include_relative about.md %} from index.md.
+  - about.md
+  # contact.md has no front matter and no page links to it; excluding it
+  # stops it from being published as a bare, unstyled /contact.md file.
+  - contact.md
 
 # Collections (optional)
 collections:

@@ -26,7 +26,9 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3"
+          # Reads the version from .ruby-version so local dev and CI always
+          # build with the same Ruby — bump that one file to upgrade both.
+          ruby-version: .ruby-version
           bundler-cache: true  # runs bundle install and caches gems
 
       - name: Setup Pages
