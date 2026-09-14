@@ -74,6 +74,26 @@ a:focus {
     color: #0099cc;
 }
 
+/* Visible focus ring for keyboard navigation */
+:focus-visible {
+    outline: 2px solid #00cdff;
+    outline-offset: 2px;
+}
+
+/* Respect the user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 /* Header and Navigation inspired by jekyll-template */
 header {
     background: #000;
@@ -109,7 +129,7 @@ header {
     height: 100%;
 }
 
-.intro-text h2 {
+.intro-text h1 {
     font-size: 4rem;
     margin-bottom: 30px;
     color: #fff;
@@ -170,7 +190,11 @@ header {
     align-items: center;
 }
 
-.nav-container h1 a {
+.nav-container .brand {
+    margin: 0;
+}
+
+.nav-container .brand a {
     color: #fff;
     text-decoration: none;
     font-size: 2rem;
@@ -237,7 +261,7 @@ main {
     text-align: left;
 }
 
-#about h1 {
+#about h2 {
     text-align: center;
 }
 
@@ -349,7 +373,7 @@ footer p {
         float: none !important;
     }
     
-    .intro-text h2 {
+    .intro-text h1 {
         font-size: 2rem;
     }
     

@@ -2,11 +2,21 @@
 
 <ul class="list-inline social-buttons">
     {% for network in site.social %}
-    <li><a href="{{ network.url }}" target="_blank">
-      {% if network.title == 'book' %}
-        <i class="fa fa-graduation-cap fa-fw"></i>
+    {% case network.title %}
+      {% when 'book' %}
+        {% assign network_label = 'Google Scholar' %}
+      {% when 'github' %}
+        {% assign network_label = 'GitHub' %}
+      {% when 'linkedin' %}
+        {% assign network_label = 'LinkedIn' %}
       {% else %}
-        <i class="fa fa-{{ network.title }} fa-fw"></i>
+        {% assign network_label = network.title %}
+    {% endcase %}
+    <li><a href="{{ network.url }}" target="_blank" rel="me noopener" aria-label="{{ site.author }} on {{ network_label }}">
+      {% if network.title == 'book' %}
+        <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
+      {% else %}
+        <i class="fa fa-{{ network.title }} fa-fw" aria-hidden="true"></i>
       {% endif %}
     </a></li>
     {% endfor %}

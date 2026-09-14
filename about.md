@@ -1,4 +1,4 @@
-# About
+## About
 {: #about-heading}
 
 I am a Senior Director of Compiler Engineering at [NVIDIA](https://www.nvidia.com), where I lead a team working on compiler and agent co-design. Our goal is to shape what a compiler becomes once agents are first-class users of it.
