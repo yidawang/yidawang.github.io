@@ -320,7 +320,10 @@ footer p {
     text-decoration: none;
 }
 
-.social-buttons a i {
+.social-buttons a svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
     display: inline-block;
     vertical-align: middle;
 }
